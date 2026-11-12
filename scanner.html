@@ -1,122 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Find local business website opportunities with SignalScout.">
-<title>Lead Scanner — SignalScout</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use the SignalScout public-data business discovery dashboard or run its Python scanner locally. Filter by location and category, review website signals, and export results.">
+  <meta name="robots" content="index,follow"><link rel="canonical" href="https://signalscout.wasner.app/scanner.html">
+  <meta property="og:title" content="SignalScout Scanner"><meta property="og:description" content="Explore public business listings and review website signals with Python-powered research."><meta property="og:url" content="https://signalscout.wasner.app/scanner.html">
+  <title>Business Discovery Scanner | SignalScout</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="navbar">
-    <a class="logo" href="index.html">
-        <span class="logo-icon">S</span>
-        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
-    </a>
-    <nav>
-        <a href="index.html">Overview</a>
-        <a href="scanner.html">Lead Scanner</a>
-        <a href="guide.html">Documentation</a>
-    </nav>
-    <a class="nav-button" href="guide.html">How it works ↗</a>
-</header>
-
-<main class="workspace">
-    <div class="section-label">RESEARCH WORKSPACE / 01</div>
-    <h1>Lead <span>Scanner.</span></h1>
-    <p class="muted">Discover public business listings and evaluate their websites.</p>
-
-    <div class="scanner-layout">
-        <section class="panel">
-            <h3>Search configuration</h3>
-
-            <label for="area">Location</label>
-            <input id="area" value="San Jose, California, USA">
-
-            <label for="category">Business category</label>
-            <select id="category">
-                <option value="all">All businesses</option>
-                <option value="restaurant">Restaurants</option>
-                <option value="retail">Retail</option>
-                <option value="beauty">Beauty</option>
-                <option value="professional">Professional services</option>
-                <option value="fitness">Fitness</option>
-                <option value="automotive">Automotive</option>
-            </select>
-
-            <label for="limit">Maximum results</label>
-            <select id="limit">
-                <option value="15">15 businesses</option>
-                <option value="30" selected>30 businesses</option>
-                <option value="50">50 businesses</option>
-            </select>
-
-            <button class="button black full" id="copy-command">
-                Copy Python command →
-            </button>
-
-            <p id="command-status" class="small muted">
-                Copy the command and execute it in your terminal.
-            </p>
-
-            <div class="notice">
-                Only public business listings and public website
-                performance data are used.
-            </div>
-        </section>
-
-        <section class="panel">
-            <div class="results-header">
-                <h3>Discovery results</h3>
-                <button class="button white" id="refresh">Refresh ↻</button>
-            </div>
-
-            <div class="metrics">
-                <div><strong id="total">0</strong><small>Businesses</small></div>
-                <div><strong id="websites">0</strong><small>Websites</small></div>
-                <div><strong id="review">0</strong><small>Review flags</small></div>
-            </div>
-
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>BUSINESS</th>
-                            <th>WEBSITE</th>
-                            <th>PERFORMANCE</th>
-                            <th>STATUS</th>
-                        </tr>
-                    </thead>
-                    <tbody id="results">
-                        <tr>
-                            <td colspan="4">Run scanner.py to generate results.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <button class="button white" id="export">Export JSON ↓</button>
-            <p id="last-updated" class="small muted">No scan loaded.</p>
-        </section>
-    </div>
-
-    <p class="small muted">
-        A missing website listing does not prove that a business has
-        no website. Automated scores are indicators, not SEO rankings.
-    </p>
-</main>
-
-<footer>
-    <a class="logo" href="index.html">
-        <span class="logo-icon">S</span>
-        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
-    </a>
-    <span>Public-data research platform</span>
-    <span>Owned by Ethan Software</span>
-</footer>
-
-<script src="app.js"></script>
-</body>
-</html>
+<header class="navbar"><a class="logo" href="index.html"><span class="logo-icon">S</span><span>SignalScout<small>BY ETHAN SOFTWARE</small></span></a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="scanner.html" aria-current="page">Scanner</a><a href="guide.html">Guide</a><a href="api.html">APIs</a></nav><a class="nav-button" href="guide.html">How it works ↗</a></header>
+<main class="workspace"><div class="section-label">PUBLIC-DATA RESEARCH WORKSPACE</div><h1>Business <span>scanner.</span></h1><p class="muted">Configure a local Python scan, then load its results here. This static website does not run scans on a hosted backend.</p>
+<div class="scanner-layout"><section class="panel"><h2>Search configuration</h2><label for="area">Location</label><input id="area" value="San Jose, California, USA" maxlength="160" autocomplete="address-level2"><label for="category">Business category</label><select id="category"><option value="all">All businesses</option><option value="restaurant">Restaurants</option><option value="retail">Retail</option><option value="beauty">Beauty</option><option value="professional">Professional services</option><option value="fitness">Fitness</option><option value="automotive">Automotive</option></select><label for="limit">Maximum results</label><select id="limit"><option value="15">15 businesses</option><option value="30" selected>30 businesses</option><option value="50">50 businesses</option><option value="100">100 businesses</option></select><button class="button black full" id="copy-command" type="button">Copy Python command →</button><p id="command-status" class="small muted" aria-live="polite">Run the copied command from the project directory.</p><div class="notice">The website prepares a command for your local Python installation. It does not submit your search to SignalScout.</div></section>
+<section class="panel"><div class="results-header"><h2>Discovery results</h2><button class="button white" id="refresh" type="button">Load / refresh ↻</button></div><div class="metrics"><div><strong id="total">0</strong><small>Businesses</small></div><div><strong id="websites">0</strong><small>Websites listed</small></div><div><strong id="review">0</strong><small>Review flags</small></div></div><div class="table-container"><table><thead><tr><th>BUSINESS</th><th>WEBSITE</th><th>PERFORMANCE</th><th>STATUS</th></tr></thead><tbody id="results"><tr><td colspan="4">Run scanner.py locally, then load leads.json.</td></tr></tbody></table></div><button class="button white" id="export" type="button">Export loaded JSON ↓</button><p id="last-updated" class="small muted" aria-live="polite">No scan loaded.</p></section></div>
+<p class="small muted">A missing listing does not prove a business has no website. Automated scores are snapshots, not rankings or guarantees. OSM attribution: © OpenStreetMap contributors, ODbL.</p></main>
+<footer><a class="logo" href="index.html"><span class="logo-icon">S</span><span>SignalScout<small>BY ETHAN SOFTWARE</small></span></a><div class="footer-links"><a href="api.html">API directory</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:ethansoftware@outlook.com">Contact</a></div><span><a href="https://github.com/EthanSoftware/SignalScout">Open source</a></span></footer><script src="app.js" defer></script>
+</body></html>

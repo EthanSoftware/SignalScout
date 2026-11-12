@@ -1,112 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="SignalScout discovers local business website opportunities using public data and website performance analysis.">
-<meta name="theme-color" content="#ffffff">
-<title>SignalScout — Find Your Next Business Opportunity</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover local businesses and review website performance with SignalScout, an open-source Python scanner and research website using public data.">
+  <meta name="theme-color" content="#111318">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://signalscout.wasner.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SignalScout — Open-source local business research">
+  <meta property="og:description" content="Explore public business listings and website quality signals with Python or the web dashboard.">
+  <meta property="og:url" content="https://signalscout.wasner.app/">
+  <title>SignalScout | Open-Source Business Discovery & Website Research</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SignalScout","applicationCategory":"BusinessApplication","operatingSystem":"Web, Python 3.10+","url":"https://signalscout.wasner.app/","description":"Open-source local business discovery and website research using public data.","author":{"@type":"Organization","name":"Ethan Software","email":"ethansoftware@outlook.com"},"codeRepository":"https://github.com/EthanSoftware/SignalScout"}</script>
 </head>
 <body>
-
-<header class="navbar">
-    <a class="logo" href="index.html">
-        <span class="logo-icon">S</span>
-        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
-    </a>
-    <nav>
-        <a href="index.html">Overview</a>
-        <a href="scanner.html">Lead Scanner</a>
-        <a href="guide.html">Documentation</a>
-    </nav>
-    <a class="nav-button" href="scanner.html">Launch Scanner ↗</a>
-</header>
-
+<header class="navbar"><a class="logo" href="index.html"><span class="logo-icon">S</span><span>SignalScout<small>BY ETHAN SOFTWARE</small></span></a><nav aria-label="Main navigation"><a href="index.html" aria-current="page">Overview</a><a href="scanner.html">Scanner</a><a href="guide.html">Guide</a><a href="api.html">APIs</a></nav><a class="nav-button" href="scanner.html">Open scanner ↗</a></header>
 <main>
-<section class="hero">
-    <div class="eyebrow">BUSINESS INTELLIGENCE PLATFORM</div>
-
-    <h1>Find businesses.<br>
-    <span>Find opportunities.</span></h1>
-
-    <p>
-        Discover local companies with potential website improvement
-        opportunities. Research public business listings, identify
-        performance issues and build your prospecting pipeline.
-    </p>
-
-    <div class="hero-buttons">
-        <a class="button black" href="scanner.html">Start discovering →</a>
-        <a class="button white" href="guide.html">Explore the platform</a>
-    </div>
-
-    <div class="hero-visual">
-        <div class="dashboard-preview">
-            <div class="preview-header">
-                <span>YOUR OPPORTUNITY DASHBOARD</span>
-                <span class="online">● READY</span>
-            </div>
-            <div class="preview-grid">
-                <div><small>BUSINESSES DISCOVERED</small><strong>128</strong></div>
-                <div><small>WEBSITES ANALYZED</small><strong>94</strong></div>
-                <div><small>NEEDS REVIEW</small><strong>36</strong></div>
-            </div>
-            <div class="preview-chart">
-                <div style="height:35%"></div>
-                <div style="height:65%"></div>
-                <div style="height:45%"></div>
-                <div style="height:85%"></div>
-                <div style="height:55%"></div>
-                <div style="height:95%"></div>
-                <div style="height:70%"></div>
-            </div>
-            <div class="preview-footer">Illustrative dashboard data — not live results.</div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="section-label">THE OPPORTUNITY</div>
-    <h2>Better research.<br>Better conversations.</h2>
-
-    <div class="cards">
-        <article class="card">
-            <div class="card-icon">⌖</div>
-            <h3>Discover businesses</h3>
-            <p>Search business listings in specific cities and regions.</p>
-        </article>
-        <article class="card">
-            <div class="card-icon">◫</div>
-            <h3>Analyze websites</h3>
-            <p>Measure mobile performance, SEO and accessibility.</p>
-        </article>
-        <article class="card">
-            <div class="card-icon">↗</div>
-            <h3>Find opportunities</h3>
-            <p>Identify websites that deserve a closer human review.</p>
-        </article>
-    </div>
-</section>
-
-<section class="cta">
-    <div>
-        <div class="section-label">GET STARTED</div>
-        <h2>Your next opportunity<br>could be around the corner.</h2>
-    </div>
-    <a href="scanner.html" class="button black">Open SignalScout →</a>
-</section>
+  <section class="hero">
+    <div class="eyebrow">OPEN-SOURCE · PYTHON + WEB · PUBLIC DATA</div>
+    <h1>Research local business.<br><span>Find useful signals.</span></h1>
+    <p>SignalScout combines a Python command-line scanner with a simple web dashboard. Explore public business listings, review listed websites, and export your findings—without automated outreach.</p>
+    <div class="hero-buttons"><a class="button black" href="scanner.html">Explore the scanner →</a><a class="button white" href="guide.html">Read the guide</a></div>
+    <div class="hero-visual"><div class="dashboard-preview"><div class="preview-header"><span>YOUR RESEARCH WORKSPACE</span><span class="online">● READY</span></div><div class="preview-grid"><div><small>PUBLIC LISTINGS</small><strong>Explore</strong></div><div><small>WEBSITE SIGNALS</small><strong>Review</strong></div><div><small>YOUR EXPORTS</small><strong>JSON + CSV</strong></div></div><div class="preview-footer">Illustrative interface. Results depend on public data coverage and provider availability.</div></div></div>
+  </section>
+  <section class="section"><div class="section-label">ONE PROJECT, TWO WAYS TO WORK</div><h2>Run it locally.<br>Review it on the web.</h2><div class="cards"><article class="card"><div class="card-icon">⌘</div><h3>Python scanner</h3><p>Search an area and category from your terminal. Export reproducible JSON and CSV files for your own research.</p><a href="guide.html">Python setup →</a></article><article class="card"><div class="card-icon">◫</div><h3>Multi-page website</h3><p>Use the responsive dashboard, inspect the methodology, and see documented public data sources.</p><a href="scanner.html">Open dashboard →</a></article><article class="card"><div class="card-icon">◎</div><h3>Evidence, not assumptions</h3><p>Website scores are limited indicators. Verify each listing and its context before drawing conclusions.</p><a href="terms.html">Responsible use →</a></article></div></section>
+  <section class="cta"><div><div class="section-label">GET STARTED</div><h2>Start with public data.<br>Make your own assessment.</h2></div><a href="scanner.html" class="button black">Launch SignalScout →</a></section>
 </main>
-
-<footer>
-    <a class="logo" href="index.html">
-        <span class="logo-icon">S</span>
-        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
-    </a>
-    <span>Public-data research platform</span>
-    <span>Owned by Ethan Software</span>
-</footer>
-
+<footer><a class="logo" href="index.html"><span class="logo-icon">S</span><span>SignalScout<small>BY ETHAN SOFTWARE</small></span></a><div class="footer-links"><a href="api.html">API directory</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="mailto:ethansoftware@outlook.com">Contact</a></div><span>© Ethan Software · <a href="https://github.com/EthanSoftware/SignalScout">Open source</a></span></footer>
 </body>
 </html>
