@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Learn how SignalScout discovers businesses and evaluates public website performance data.">
+<title>Documentation — SignalScout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="index.html">
+        <span class="logo-icon">S</span>
+        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
+    </a>
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="scanner.html">Lead Scanner</a>
+        <a href="guide.html">Documentation</a>
+    </nav>
+    <a class="nav-button" href="scanner.html">Launch Scanner ↗</a>
+</header>
+
+<main class="workspace">
+    <div class="section-label">DOCUMENTATION / OPEN SOURCE</div>
+    <h1>Built for <span>discovery.</span></h1>
+    <p class="muted">Understand the technology, data sources and methodology.</p>
+
+    <div class="docs-grid">
+        <article class="panel">
+            <div class="section-label">01 / DISCOVERY</div>
+            <h2>OpenStreetMap</h2>
+            <p>Discover publicly listed local businesses using geographic search and business category tags.</p>
+            <a href="https://wiki.openstreetmap.org/wiki/Overpass_API" target="_blank" rel="noopener noreferrer">API documentation ↗</a>
+        </article>
+
+        <article class="panel">
+            <div class="section-label">02 / LOCATION</div>
+            <h2>Nominatim</h2>
+            <p>Convert a city or region into geographic coordinates for business discovery.</p>
+            <a href="https://nominatim.org/release-docs/latest/api/Search/" target="_blank" rel="noopener noreferrer">API documentation ↗</a>
+        </article>
+
+        <article class="panel">
+            <div class="section-label">03 / PERFORMANCE</div>
+            <h2>Google PageSpeed</h2>
+            <p>Measure mobile Lighthouse performance, SEO and accessibility scores for listed websites.</p>
+            <a href="https://developers.google.com/speed/docs/insights/v5/get-started" target="_blank" rel="noopener noreferrer">API documentation ↗</a>
+        </article>
+
+        <article class="panel">
+            <div class="section-label">04 / AUTOMATION</div>
+            <h2>Python scanner</h2>
+            <p>The Python program handles location discovery, public business data, website checks and JSON/CSV exports.</p>
+            <code>python scanner.py --area "San Jose, California, USA"</code>
+        </article>
+    </div>
+
+    <section class="panel responsible">
+        <h2>Responsible research</h2>
+        <ul>
+            <li>Use publicly accessible data and documented APIs only.</li>
+            <li>Respect API quotas, rate limits and provider policies.</li>
+            <li>Do not harvest private personal information.</li>
+            <li>Do not automate unsolicited outreach.</li>
+            <li>Manually verify every potential business opportunity.</li>
+            <li>Do not interpret missing directory data as proof a website does not exist.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <a class="logo" href="index.html">
+        <span class="logo-icon">S</span>
+        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
+    </a>
+    <span>Open-source project</span>
+    <span>Owned by Ethan Software</span>
+</footer>
+</body>
+</html>

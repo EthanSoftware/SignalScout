@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Find local business website opportunities with SignalScout.">
+<title>Lead Scanner — SignalScout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="index.html">
+        <span class="logo-icon">S</span>
+        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
+    </a>
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="scanner.html">Lead Scanner</a>
+        <a href="guide.html">Documentation</a>
+    </nav>
+    <a class="nav-button" href="guide.html">How it works ↗</a>
+</header>
+
+<main class="workspace">
+    <div class="section-label">RESEARCH WORKSPACE / 01</div>
+    <h1>Lead <span>Scanner.</span></h1>
+    <p class="muted">Discover public business listings and evaluate their websites.</p>
+
+    <div class="scanner-layout">
+        <section class="panel">
+            <h3>Search configuration</h3>
+
+            <label for="area">Location</label>
+            <input id="area" value="San Jose, California, USA">
+
+            <label for="category">Business category</label>
+            <select id="category">
+                <option value="all">All businesses</option>
+                <option value="restaurant">Restaurants</option>
+                <option value="retail">Retail</option>
+                <option value="beauty">Beauty</option>
+                <option value="professional">Professional services</option>
+                <option value="fitness">Fitness</option>
+                <option value="automotive">Automotive</option>
+            </select>
+
+            <label for="limit">Maximum results</label>
+            <select id="limit">
+                <option value="15">15 businesses</option>
+                <option value="30" selected>30 businesses</option>
+                <option value="50">50 businesses</option>
+            </select>
+
+            <button class="button black full" id="copy-command">
+                Copy Python command →
+            </button>
+
+            <p id="command-status" class="small muted">
+                Copy the command and execute it in your terminal.
+            </p>
+
+            <div class="notice">
+                Only public business listings and public website
+                performance data are used.
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="results-header">
+                <h3>Discovery results</h3>
+                <button class="button white" id="refresh">Refresh ↻</button>
+            </div>
+
+            <div class="metrics">
+                <div><strong id="total">0</strong><small>Businesses</small></div>
+                <div><strong id="websites">0</strong><small>Websites</small></div>
+                <div><strong id="review">0</strong><small>Review flags</small></div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BUSINESS</th>
+                            <th>WEBSITE</th>
+                            <th>PERFORMANCE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results">
+                        <tr>
+                            <td colspan="4">Run scanner.py to generate results.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="button white" id="export">Export JSON ↓</button>
+            <p id="last-updated" class="small muted">No scan loaded.</p>
+        </section>
+    </div>
+
+    <p class="small muted">
+        A missing website listing does not prove that a business has
+        no website. Automated scores are indicators, not SEO rankings.
+    </p>
+</main>
+
+<footer>
+    <a class="logo" href="index.html">
+        <span class="logo-icon">S</span>
+        <span>SignalScout<small>BY ETHAN SOFTWARE</small></span>
+    </a>
+    <span>Public-data research platform</span>
+    <span>Owned by Ethan Software</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
