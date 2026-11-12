@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://signalscout.wasner.app/</loc></url>
   <url><loc>https://signalscout.wasner.app/scanner.html</loc></url>
+  <url><loc>https://signalscout.wasner.app/about.html</loc></url>
+  <url><loc>https://signalscout.wasner.app/methodology.html</loc></url>
+  <url><loc>https://signalscout.wasner.app/faq.html</loc></url>
+  <url><loc>https://signalscout.wasner.app/contribute.html</loc></url>
   <url><loc>https://signalscout.wasner.app/guide.html</loc></url>
   <url><loc>https://signalscout.wasner.app/api.html</loc></url>
   <url><loc>https://signalscout.wasner.app/terms.html</loc></url>

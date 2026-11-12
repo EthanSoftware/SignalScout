@@ -1,52 +1,45 @@
 # SignalScout
 
-**Open-source local business discovery and website research — available as a Python CLI and a lightweight multi-page website.**
+**Open-source local business discovery, available as a live browser search and Python CLI.**
 
-Website: [signalscout.wasner.app](https://signalscout.wasner.app) · Contact: [ethansoftware@outlook.com](mailto:ethansoftware@outlook.com)
+[Launch the browser scanner](https://signalscout.wasner.app/scanner.html) · [GitHub: EthanSoftware/SignalScout](https://github.com/EthanSoftware/SignalScout) · [Contact](mailto:ethansoftware@outlook.com)
 
-SignalScout helps you explore publicly listed local businesses and review publicly available website quality signals. It is a research aid, not a lead-verification or outreach tool. The Python scanner uses OpenStreetMap's Nominatim and Overpass services for location and business discovery, and Google PageSpeed Insights for optional website audits. The website can display JSON results produced by the Python scanner.
+SignalScout helps users research publicly listed local businesses. The browser scanner geocodes a place with Open-Meteo and directly queries OpenStreetMap through Overpass API. It prioritizes businesses whose community-maintained listing includes a website and displays other publicly listed details when present. Results are not independently verified. The optional Python CLI remains available for local scans and PageSpeed audits.
 
-## Features
+## Run in your browser
 
-- Python command-line scanner and browser-based, multi-page site.
-- Location and category filters for public business listings.
-- Optional mobile Lighthouse performance, SEO, and accessibility metrics.
-- JSON and CSV exports; browser results dashboard.
-- API directory documenting 15 public APIs and data services, with active integrations clearly identified.
-- Documentation, Terms of Use, Privacy Notice, sitemap, and crawler guidance.
-- No account collection, private data collection, or automated outreach.
+Open <https://signalscout.wasner.app/scanner.html>, enter a city, choose a category and radius, then select **Search public listings**. No account or Python installation is needed for browser search. The browser sends requests directly to Open-Meteo and Overpass; public API availability, browser CORS behavior, and provider limits may vary. A **Random** button selects a sample location, while popular-city shortcuts provide examples. Export results as JSON or CSV.
+
+If browser API requests are unavailable, use the Python command-line scanner below.
 
 ## Run with Python
 
-Requires Python 3.10 or newer. No third-party Python packages are needed.
+Requires Python 3.10+; no third-party packages are required.
 
 ```bash
-python scanner.py --area "San Jose, California, USA"
+git clone https://github.com/EthanSoftware/SignalScout.git
+cd SignalScout
 python scanner.py --area "San Jose, California, USA" --category restaurant --limit 30
 ```
 
-Optional: set `PAGESPEED_API_KEY` in your environment to use your own Google PageSpeed Insights quota. The scanner writes `leads.json` and `leads.csv` beside `scanner.py`; do not publish those files if you do not intend to make your search results public.
+The CLI writes `leads.json` and `leads.csv` in the project directory. Optionally set `PAGESPEED_API_KEY` to use your own Google PageSpeed Insights quota. Treat generated exports as your data; avoid publishing them unintentionally.
 
-## Run the website locally
+To preview the static pages locally, run `python -m http.server 8000` and open <http://localhost:8000>.
 
-Serve the repository root (rather than opening files directly) so browser `fetch()` can load results:
+## Pages
 
-```bash
-python -m http.server 8000
-```
+- [Live scanner](https://signalscout.wasner.app/scanner.html): browser-side public-data search and exports.
+- [Methodology](https://signalscout.wasner.app/methodology.html): data handling and limitations.
+- [Data sources](https://signalscout.wasner.app/api.html): active integrations and optional APIs.
+- [About](https://signalscout.wasner.app/about.html), [FAQ](https://signalscout.wasner.app/faq.html), and [Contributing](https://signalscout.wasner.app/contribute.html).
+- [Terms](https://signalscout.wasner.app/terms.html) and [Privacy](https://signalscout.wasner.app/privacy.html).
 
-Visit <http://localhost:8000>. The scanner page provides a copyable Python command. Run it in a terminal, then refresh the page to view the generated `leads.json`.
+## Sources and responsible use
 
-## Public API directory
+Browser search uses Open-Meteo Geocoding API for place lookup and Overpass API to query OpenStreetMap. OSM businesses may have optional `website`, `phone`, `email`, and `opening_hours` tags; their presence and accuracy depend on community mapping. Public services have independent policies and can rate limit requests. Respect their usage terms. OpenStreetMap attribution: © OpenStreetMap contributors, data available under ODbL. SignalScout does not automate outreach and is not intended for sensitive personal-data collection.
 
-See [APIs and data sources](api.html) for 15 publicly documented services. SignalScout currently calls Nominatim, Overpass API, and Google PageSpeed Insights from Python; the remaining entries are optional sources, not claims of live integrations. Third-party quotas, credentials, terms, and availability are controlled by their respective providers. The browser does not proxy requests through a SignalScout server.
-
-## Responsible use and attribution
-
-Use public data only for lawful, respectful research. Respect each provider's terms, attribution requirements, rate limits, and caching policies. Verify findings independently; directory omissions do not mean a business lacks a website, and automated scores are not search rankings. Do not use the project to collect sensitive personal information, evade access controls, or automate unsolicited contact. OpenStreetMap data is © OpenStreetMap contributors and available under the Open Database License (ODbL).
-
-Read the [Terms of Use](terms.html) and [Privacy Notice](privacy.html). Questions: [ethansoftware@outlook.com](mailto:ethansoftware@outlook.com).
+Read the [Terms of Use](terms.html) and [Privacy Notice](privacy.html). Questions: ethansoftware@outlook.com.
 
 ## License
 
-See [LICENCE](LICENCE).
+See [LICENCE](LICENCE). Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
